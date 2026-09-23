@@ -16,13 +16,13 @@ function About() {
         </p>
         <div className="about-stats">
           <div className="card">
-            <h3>1+</h3>
+            <h3>2+</h3>
             <p>Years Experience</p>
           </div>
-          <div className="card">
+          {/* <div className="card">
             <h3>2</h3>
             <p>Projects Built</p>
-          </div>
+          </div> */}
           <div className="card">
             <h3>2</h3>
             <p>Patents / Publications</p>

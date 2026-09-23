@@ -1,72 +1,36 @@
-import { Typewriter } from "react-simple-typewriter";
-import {
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaGithub,
-  FaGitAlt,
-  FaAws,
-} from "react-icons/fa";
-import {
-  SiMongodb,
-  SiExpress,
-  SiPostgresql,
-  SiFirebase,
-  SiRedis,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiJavascript,
-  SiRedux,
-  SiFigma,
-} from "react-icons/si";
-
 import profile from "../assets/profile.jpg";
 
 function Hero() {
   return (
-    <section className="hero">
-      {/* Floating Icons */}
-      <FaReact className="icon react" />
-      <FaNodeJs className="icon node" />
-      <SiMongodb className="icon mongo" />
-      <FaDocker className="icon docker" />
-      <SiExpress className="icon express" />
-      <SiPostgresql className="icon postgres" />
-      <SiFirebase className="icon firebase" />
-      <SiRedis className="icon redis" />
-      <SiNextdotjs className="icon nextjs" />
-      <SiTypescript className="icon typescript" />
-      <SiTailwindcss className="icon tailwind" />
-      <SiJavascript className="icon javascript" />
-      <SiRedux className="icon redux" />
-      <FaGithub className="icon github" />
-      <FaGitAlt className="icon git" />
-      <FaAws className="icon aws" />
-      <SiFigma className="icon figma" />
-
-      <img src={profile} alt="profile" className="profile-img" />
-
-      <h1 className="glow">Himanshu Bakre</h1>
-
-      <h2>
-        <Typewriter
-          words={["MERN Stack Developer", "Backend Engineer", "Problem Solver"]}
-          loop
-          cursor
-        />
-      </h2>
-
-      <div className="hero-buttons">
-        <a href="#contact" className="btn">
-          Hire Me
-        </a>
-        <a href="/resume.pdf" className="btn">
-          Download Resume
-        </a>
+    <section className="hero" id="top">
+      <div className="hero-text">
+        <span className="hero-label">Full-Stack Developer</span>
+        <h1>Hi, I'm <span>Himanshu Bakre</span></h1>
+        <p className="hero-role">MERN Stack Developer &middot; Backend Engineer</p>
+        <p className="hero-desc">
+          I build modern web experiences and practical digital solutions —
+          from production backend systems to clean, fast websites for
+          freelance clients.
+        </p>
+        <div className="hero-buttons">
+          <a href="#projects" className="btn btn-primary">View My Work</a>
+          <a href="#contact" className="btn btn-outline">Let's Connect</a>
+          <a href="/Himanshu_Bakre.pdf" className="btn btn-outline" target="_blank" rel="noreferrer">
+            Download Resume
+          </a>
+        </div>
       </div>
 
-      <div className="scroll-down">↓</div>
+      <div className="hero-photo-wrap">
+        <div className="hero-photo-frame">
+          <img
+            src={profile}
+            alt="Himanshu Bakre, full-stack developer"
+            width="700"
+            height="875"
+          />
+        </div>
+      </div>
     </section>
   );
 }

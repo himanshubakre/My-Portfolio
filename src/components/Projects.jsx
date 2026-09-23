@@ -1,29 +1,39 @@
-import React from "react";
-
-import { motion } from "framer-motion";
+const PROJECTS = [
+  {
+    name: "VentureVerse",
+    desc: "Full-stack MERN project.",
+    tags: ["React", "Node.js", "MongoDB"],
+    github: "#",
+    live: "#",
+  },
+  {
+    name: "Real Estate App",
+    desc: "Full-stack MERN project.",
+    tags: ["React", "Express", "MongoDB"],
+    github: "#",
+    live: "#",
+  },
+];
 
 function Projects() {
   return (
     <section id="projects">
-      <h2 className="glow">Projects</h2>
+      <span className="section-label">Projects</span>
+      <h2 className="section-title">Things I've Built</h2>
 
-      <div className="grid">
-        {["VentureVerse", "Real Estate App"].map((p, i) => (
-          <motion.div
-            className="glass"
-            whileHover={{ rotateY: 10, scale: 1.05 }}
-            key={i}
-          >
-            <h3>{p}</h3>
-            <p>Full stack MERN project</p>
-
-            <a href="#" className="btn">
-              GitHub
-            </a>
-            <a href="#" className="btn">
-              Live
-            </a>
-          </motion.div>
+      <div className="projects-grid">
+        {PROJECTS.map((p) => (
+          <div className="card project-card" key={p.name}>
+            <h3>{p.name}</h3>
+            <p>{p.desc}</p>
+            <div className="project-tags">
+              {p.tags.map((t) => <span key={t}>{t}</span>)}
+            </div>
+            <div className="project-links">
+              <a href={p.github} className="btn btn-outline">GitHub</a>
+              <a href={p.live} className="btn btn-primary">Live Demo</a>
+            </div>
+          </div>
         ))}
       </div>
     </section>

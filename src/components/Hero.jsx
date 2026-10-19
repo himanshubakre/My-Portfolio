@@ -1,4 +1,4 @@
-import profile from "../assets/profile.jpg";
+import profile from "../assets/Himanshu's Linkedin Profile Picture.png";
 
 function Hero() {
   return (
